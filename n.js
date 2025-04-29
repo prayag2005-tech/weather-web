@@ -10,7 +10,7 @@ document.getElementById("searchBtn").addEventListener("click", function() {
 });
 
 function getWeather(city) {
-    const apiKey = 'ffaf13be2ebb140a939f88c2e5b399fd';
+    const apiKey = 'ffaf13be2ebb140a939f88c2e5b399fde';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(apiUrl)
@@ -30,7 +30,7 @@ function getWeather(city) {
 }
 
 function getFiveDayForecast(city) {
-    const apiKey = 'ffaf13be2ebb140a939f88c2e5b399fd';
+    const apiKey = 'ffaf13be2ebb140a939f88c2e5b399fde';
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(apiUrl)
