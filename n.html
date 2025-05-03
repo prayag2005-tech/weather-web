@@ -3,28 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="n.css">
+    <title>Interactive Weather Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="o.css">
 </head>
 <body>
-    <!-- Background Video Container -->
-    <div class="background-video-container">
-        <video autoplay muted loop id="background-video">
-            <source src="https://v.ftcdn.net/05/20/35/25/700_F_520352576_xBIrWVTyMtlAsesCB0YFXFcTs23dLbcM_ST.mp4" type="video/mp4">
-        </video>
-    </div>
-
+    <div id="map"></div>
     <div class="container">
-        <div id="main-card">
-            <h1>Weather App</h1>
-            <input type="text" id="city" placeholder="Enter City Name">
-            <button id="searchBtn">Search</button>
-            <div id="today-weather-info"></div>
-            <button id="fullForecastBtn" style="display:none;">Full 5-Day Forecast</button>
+        <h1>Weather App</h1>
+        <input type="text" id="city" placeholder="Enter city">
+        <button id="searchBtn">Search</button>
+        <button id="refreshBtn">Refresh</button>
+        <button id="forecastBtn">5-Day Forecast</button>
+        <div id="weather-info">
+            <h3 id="city-name"></h3>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
         </div>
-        <div id="forecast-info" style="display:none;"></div>
+        <div id="five-day-forecast" style="display: none;">
+            <div class="forecast-card" id="day1"></div>
+            <div class="forecast-card" id="day2"></div>
+            <div class="forecast-card" id="day3"></div>
+            <div class="forecast-card" id="day4"></div>
+            <div class="forecast-card" id="day5"></div>
+        </div>
     </div>
-
-    <script src="n.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="o.js"></script>
 </body>
 </html>
